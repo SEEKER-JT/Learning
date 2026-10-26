@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習の教科書 - 科学的根拠に基づいた学習戦略</title>
+    
+    <!-- Google Fonts: Inter (English) & Noto Sans JP (Japanese) for clean typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons (Lightweight, clean icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS (CDN for Single File output) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#5E88A6',
+                        mainDark: '#4A6D85',
+                        surface: '#F5F5F7', /* Apple-like light gray background */
+                        textPrimary: '#1D1D1F',
+                        textSecondary: '#86868B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1D1D1F;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Scroll Animation Classes */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle Gradient Text for Emphasis */
+        .text-gradient {
+            background: linear-gradient(135deg, #5E88A6 0%, #3A5A70 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism subtle effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="selection:bg-main selection:text-white">
+
+    <!-- Hero Section -->
+    <header class="min-h-[80vh] flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-surface to-white"></div>
+        
+        <div class="z-10 max-w-3xl mx-auto fade-up delay-100">
+            <p class="text-main font-semibold tracking-widest text-sm mb-4">THE SCIENCE OF LEARNING</p>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-gradient leading-tight">
+                人は学ぶ意欲が<br class="md:hidden">無くなった瞬間、老いていく。
+            </h1>
+            <p class="text-lg md:text-xl text-textSecondary font-light leading-relaxed max-w-2xl mx-auto mb-10">
+                16万人以上のデータが導き出した、脳のメカニズム。<br>
+                生涯成長し続けるための、科学的根拠に基づいた学習戦略。
+            </p>
+            <a href="#ai-era" class="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-white bg-main rounded-full hover:bg-mainDark transition-colors duration-300 shadow-lg shadow-main/30">
+                科学的アプローチを知る
+                <i class="ph ph-arrow-down ml-2 text-lg"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Chapter 1: AI Era -->
+    <section id="ai-era" class="py-24 px-6 bg-surface">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">AI時代に、自ら学ぶ意味。</h2>
+                <p class="text-textSecondary">最適解がすぐに出る時代に、なぜ基礎学問が必要なのか。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Point 1 -->
+                <div class="bg-white rounded-3xl p-10 shadow-sm fade-up">
+                    <div class="w-12 h-12 bg-surface text-main rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph ph-compass text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">自分にとっての「正解」を導く</h3>
+                    <p class="text-textSecondary leading-relaxed">
+                        AIが提示するのは世の中の最適解。答えに至る過程を学ばなければ、自分自身の状況に合わせた真の答えを出すことはできません。
+                    </p>
+                </div>
+                <!-- Point 2 -->
+                <div class="bg-white rounded-3xl p-10 shadow-sm fade-up" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-surface text-main rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph ph-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">脳に「心地よい負荷」をかける</h3>
+                    <p class="text-textSecondary leading-relaxed">
+                        AIで簡単に得た情報は記憶に残りません。筋肉と同じく、適度な負荷（心地よい苦労）こそが、脳を成長させ長期記憶を生み出します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 2: Ineffective Methods -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto text-center fade-up">
+            <p class="text-red-500 font-semibold text-sm tracking-widest mb-2">COMMON MISTAKES</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">「やった気」になる無意識の罠</h2>
+            
+            <p class="text-lg text-textPrimary max-w-2xl mx-auto mb-12 font-medium">
+                多くの人が無意識に行う一般的な学習法は、科学的には効果が極めて低いことが判明しています。これらは<span class="text-main">「流暢性の錯覚」</span>を生み出します。
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <!-- Method 1 -->
+                <div class="border border-gray-100 rounded-3xl p-8 bg-gray-50/50">
+                    <i class="ph ph-book-open text-3xl text-gray-400 mb-4 block"></i>
+                    <h3 class="text-lg font-semibold mb-2 line-through decoration-red-400 decoration-2">再読 (Re-reading)</h3>
+                    <p class="text-sm text-textSecondary">教科書を何度も読み返す。情報が頭に残ったと錯覚するだけで長期記憶には留まりません。</p>
+                </div>
+                <!-- Method 2 -->
+                <div class="border border-gray-100 rounded-3xl p-8 bg-gray-50/50">
+                    <i class="ph ph-highlighter text-3xl text-gray-400 mb-4 block"></i>
+                    <h3 class="text-lg font-semibold mb-2 line-through decoration-red-400 decoration-2">強調・下線</h3>
+                    <p class="text-sm text-textSecondary">重要な箇所に線を引く。キーワードだけ覚え文脈を無視するため、本質的な理解に繋がりません。</p>
+                </div>
+                <!-- Method 3 -->
+                <div class="border border-gray-100 rounded-3xl p-8 bg-gray-50/50">
+                    <i class="ph ph-list-dashes text-3xl text-gray-400 mb-4 block"></i>
+                    <h3 class="text-lg font-semibold mb-2 line-through decoration-red-400 decoration-2">要約 (Summarization)</h3>
+                    <p class="text-sm text-textSecondary">大事な要点をまとめる。まとめること自体が目的となり、記憶に必要な「思い出す作業」が不足します。</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 p-6 rounded-2xl bg-surface inline-block text-left">
+                <div class="flex items-start gap-4">
+                    <i class="ph-fill ph-info text-main text-2xl mt-1"></i>
+                    <div>
+                        <h4 class="font-semibold text-sm mb-1">流暢性の錯覚とは？</h4>
+                        <p class="text-sm text-textSecondary m-0">情報をスラスラ処理できたことで、深く理解していないのに「よく分かった」と勘違いしてしまう心理現象。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 3: Effective Methods (The core) -->
+    <section class="py-24 px-6 bg-main text-white relative overflow-hidden">
+        <!-- Abstract background elements -->
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="text-center mb-16 fade-up">
+                <p class="text-white/70 font-semibold text-sm tracking-widest mb-2">THE OPTIMAL SOLUTION</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">科学が証明した、最も効果的な学習法</h2>
+                <p class="text-white/80">記憶は「入れる」時ではなく、「取り出す」プロセスで最も強化されます。</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Method 1 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-10 fade-up">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-white text-main rounded-full flex items-center justify-center">
+                            <i class="ph ph-exam text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">① 想起練習</h3>
+                    </div>
+                    <p class="text-white/90 mb-6 leading-relaxed">
+                        テキストを見ずに頭の中から記憶を取り出そうとする作業。正誤のフィードバックを伴い、誤りを修正する時に定着率は最大化されます。
+                    </p>
+                    <div class="bg-black/10 rounded-2xl p-5">
+                        <h4 class="font-semibold text-sm text-white/80 mb-3 uppercase tracking-wider">実践方法</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-lg shrink-0"></i> <span>小テストやフラッシュカードを活用する</span></li>
+                            <li class="flex items-start gap-2"><i class="ph ph-check-circle text-lg shrink-0"></i> <span>学習後、何も見ずに学んだことを白紙に書き出す</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Method 2 -->
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-10 fade-up" style="transition-delay: 100ms;">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-white text-main rounded-full flex items-center justify-center">
+                            <i class="ph ph-clock-counter-clockwise text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">② 分散学習</h3>
+                    </div>
+                    <p class="text-white/90 mb-6 leading-relaxed">
+                        時間を空けて反復する手法。忘れかけたタイミングで再度思い出すことで、脳に「重要な情報」だと認識させるスイッチが入ります。
+                    </p>
+                    <div class="bg-black/10 rounded-2xl p-5">
+                        <h4 class="font-semibold text-sm text-white/80 mb-3 uppercase tracking-wider">黄金比率 (1:4)</h4>
+                        <p class="text-sm flex items-center justify-between mb-2">
+                            <span>最初の学習</span>
+                            <i class="ph ph-arrow-right"></i>
+                            <span>最初の復習</span>
+                            <i class="ph ph-arrow-right"></i>
+                            <span class="font-bold">テスト</span>
+                        </p>
+                        <p class="text-xs text-white/70 mt-3">例：今日学んだ事を2〜3日後に復習し、今日から1週間後にテストをする</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 4: Deepening Techniques -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">さらに学びを深める3つの技術</h2>
+                <p class="text-textSecondary">中程度の効果が認められている、定着を促すテクニック。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Tech 1 -->
+                <div class="p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-shadow duration-300 fade-up">
+                    <i class="ph ph-question text-main text-4xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-3">精緻的質問</h3>
+                    <p class="text-sm text-textSecondary">
+                        「なぜこれが正解なのか？」と自問自答し、新しい情報を自分がすでに持っている知識と強く結びつける手法。
+                    </p>
+                </div>
+                <!-- Tech 2 -->
+                <div class="p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-shadow duration-300 fade-up" style="transition-delay: 100ms;">
+                    <i class="ph ph-chats text-main text-4xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-3">自己説明</h3>
+                    <p class="text-sm text-textSecondary">
+                        答えにたどり着くまでのプロセスを、教科書の言葉ではなく「自分の言葉」で第三者に教えるように説明する。
+                    </p>
+                </div>
+                <!-- Tech 3 -->
+                <div class="p-8 rounded-3xl border border-gray-100 hover:shadow-lg transition-shadow duration-300 fade-up" style="transition-delay: 200ms;">
+                    <i class="ph ph-arrows-left-right text-main text-4xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-3">交互学習</h3>
+                    <p class="text-sm text-textSecondary">
+                        同じテーマを連続して行わず、似ているが異なるものを交互に学ぶ。（例：足し算と引き算を交互に練習する）
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 5 & 6: Application (Sleep & Sports) -->
+    <section class="py-24 px-6 bg-surface">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+            
+            <!-- Sleep -->
+            <div class="fade-up">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="ph-fill ph-moon-stars text-main text-3xl"></i>
+                    <h2 class="text-2xl font-bold">睡眠と学習</h2>
+                </div>
+                <p class="text-textPrimary mb-6 font-medium">睡眠不足は学習を台無しにする。</p>
+                <p class="text-textSecondary text-sm mb-6 leading-relaxed">
+                    記憶の定着は深い眠りである「ノンレム睡眠」中に起こります。ハーバード大学の研究では、新たな知識の定着には最低6時間以上の睡眠が必要だと判明しています。
+                </p>
+                <div class="bg-white rounded-2xl p-6 shadow-sm">
+                    <h3 class="text-sm font-semibold mb-4 text-red-500">避けるべき阻害要因</h3>
+                    <ul class="space-y-3 text-sm text-textPrimary">
+                        <li class="flex items-center gap-3"><i class="ph ph-x text-red-400"></i> 就寝前のスマートフォン・テレビ</li>
+                        <li class="flex items-center gap-3"><i class="ph ph-x text-red-400"></i> 寝る直前の入浴 (2〜3時間前が適切)</li>
+                        <li class="flex items-center gap-3"><i class="ph ph-x text-red-400"></i> 夕方以降のカフェイン・アルコール</li>
+                    </ul>
+                </div>
+                <p class="text-xs text-textSecondary mt-4 flex items-center gap-2">
+                    <i class="ph-fill ph-lightbulb"></i> 暗記は就寝2時間前〜30分前（紙ベース）が効率的。
+                </p>
+            </div>
+
+            <!-- Sports Application -->
+            <div class="fade-up" style="transition-delay: 150ms;">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="ph-fill ph-person-simple-run text-main text-3xl"></i>
+                    <h2 class="text-2xl font-bold">運動学習への応用</h2>
+                </div>
+                <p class="text-textSecondary text-sm mb-6 leading-relaxed">
+                    これらの学習戦略は座学だけでなく、スポーツや運動の習得にも応用できます。以下はピラティスを例とした適用例です。
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="bg-white p-5 rounded-2xl shadow-sm">
+                        <h4 class="font-semibold text-main text-sm mb-2">想起学習 ＋ 自己説明</h4>
+                        <p class="text-sm text-textSecondary">レッスンで教わった注意点を紙に書き出し、自分で自分にレッスンするイメージで動きを声に出しながら行う。</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-sm">
+                        <h4 class="font-semibold text-main text-sm mb-2">分散学習 ＋ 交互学習</h4>
+                        <p class="text-sm text-textSecondary">週1回1時間より、毎日10分。また一つの種目に固執せず、目的が同じ異なる種目を交互に行う。</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl shadow-sm">
+                        <h4 class="font-semibold text-main text-sm mb-2">精緻的質問</h4>
+                        <p class="text-sm text-textSecondary">「なぜ自分はこの種目をやるべきなのか？」「なぜこのように動かさないといけないのか？」を常に考えながら動く。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <footer class="py-32 px-6 text-center border-t border-gray-100">
+        <div class="max-w-3xl mx-auto fade-up">
+            <h2 class="text-3xl font-bold mb-8">インプットより、アウトプットを。</h2>
+            <div class="bg-gray-50 rounded-3xl p-10 mb-10">
+                <p class="text-lg text-textPrimary leading-relaxed mb-6">
+                    学ぶ意欲の源泉は、そもそもの<strong class="text-main font-semibold">「困り事を見つける」</strong>ことにあります。何も困っていなければ、学ぼうとは思わないはずです。
+                </p>
+                <p class="text-textSecondary leading-relaxed">
+                    日々の生活を振り返り、自分は何に困っているのか、家族は何を悩んでいるのか、社会は何を必要としているのか。常日頃考えることが学ぶ意欲の源泉になります。まずは身近な困り事を探し、それを解決する方法を学んでみることから始めてみてください。
+                </p>
+            </div>
+            <p class="text-sm text-gray-400 font-medium tracking-widest uppercase">Never stop learning.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Trigger only once
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-up');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
